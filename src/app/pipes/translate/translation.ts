@@ -8,12 +8,15 @@ import { LANG_DE_NAME, LANG_DE_TRANS } from './lang-de';
 export const TRANSLATIONS = new OpaqueToken('translations');
 
 // all translations, EXIST SERVER SIDE TRANSLATE !!!
-const dictionary = {
+/*export const dictionary = {
   [LANG_CS_NAME]: LANG_CS_TRANS,
   [LANG_DE_NAME]: LANG_DE_TRANS,
-};
+};*/
 
 // providers
 export const TRANSLATION_PROVIDERS = [
-  { provide: TRANSLATIONS, useValue: dictionary },
+  { provide: TRANSLATIONS, useValue: {
+    [LANG_CS_NAME]: LANG_CS_TRANS,
+    [LANG_DE_NAME]: LANG_DE_TRANS,
+  } },
 ];
